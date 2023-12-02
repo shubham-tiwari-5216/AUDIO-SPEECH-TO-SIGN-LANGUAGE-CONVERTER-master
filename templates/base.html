@@ -1,0 +1,289 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+
+<head>
+  <style>
+    body {
+      font-family: sans-serif;
+    }
+
+    .header {
+      display: flex;
+      background-color: #000000;
+      color: whitesmoke;
+      padding: 10px;
+      margin-bottom: 0;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+      width: 50%;
+    }
+
+    #nav {
+      list-style-type: none;
+      margin-top: 0;
+      padding: 0;
+      overflow: hidden;
+      background-color: #000000;
+    }
+
+    h1 {
+      color: whitesmoke;
+      font-size: 32px;
+      margin: 0;
+      font-weight: 400;
+    }
+
+    .home-div {
+      display: flex;
+      gap: 50px;
+      align-items: center;
+      padding: 10px;
+      color: whitesmoke;
+    }
+
+    .footer {
+      position: fixed;
+      font-family: sans-serif;
+      left: 0;
+      bottom: 0;
+      width: 100%;
+      gap: 10px;
+      text-align: center;
+    }
+
+    h2 {
+      margin: 0 0 10px 0;
+      font-size: 38px;
+      font-weight: 700;
+      color: whitesmoke;
+      font-family: 'sans-serif';
+    }
+
+    .li {
+      float: left;
+    }
+
+    .li a {
+      display: block;
+      align-items: left;
+      color: rgba(255, 255, 255, 0.5);
+      font-size: 20px;
+      font-family: sans-serif;
+      padding: 14px 16px;
+      text-decoration: none;
+    }
+
+    li a:hover {
+      background-color: #000000;
+      color: whitesmoke;
+      transition: 0.3s;
+    }
+
+    li a:active {
+      color: #27a776;
+    }
+
+    .button {
+      appearance: none;
+      background-color: transparent;
+      border: 2px solid #27a776;
+      border-radius: 10px;
+      box-sizing: border-box;
+      color: #27a776;
+      cursor: pointer;
+      display: inline-block;
+      font-size: 16px;
+      font-weight: 600;
+      line-height: normal;
+      margin: 0;
+      padding: 16px 24px;
+      text-align: center;
+      transition: all 300ms cubic-bezier(.23, 1, 0.32, 1);
+      touch-action: manipulation;
+      will-change: transform;
+    }
+
+    .button:hover {
+      color: #000000;
+      background-color: #27a776;
+      border: 2px solid #000000;
+      box-shadow: rgba(0, 0, 0, 0.25) 0 8px 15px;
+      transform: translateY(-2px);
+    }
+
+    span {
+      color: #27a776;
+      font-family: sans-serif;
+      font-size: 32px;
+    }
+
+    .split {
+      height: 100%;
+      width: 49.3%;
+      position: fixed;
+      z-index: 1;
+      top: 50;
+      overflow-x: hidden;
+      padding-top: 20px;
+
+    }
+
+    .left {
+      left: 20;
+      border-right: 0px #27a776 solid;
+    }
+
+    .right {
+      right: 0;
+      border-left: 1px #27a776 solid;
+    }
+
+    .mic {
+      opacity: 0.7;
+    }
+
+    .mic:hover {
+      opacity: 1.0;
+      cursor: pointer;
+    }
+
+    .td {
+      color: whitesmoke;
+      font-family: 'Times New Roman';
+      font-weight: bold;
+      font-size: 30px;
+    }
+
+    body {
+      background-color: #000000
+    }
+
+    .form-style {
+      font: 95% sans-serif;
+      max-width: 400px;
+      margin: 10px auto;
+      padding: 16px;
+
+    }
+
+    .form-style h1,
+    .form-style a {
+      padding: 20px 0;
+      font-size: 24px;
+      font-weight: bold;
+      font-family: "sans-serif";
+      text-align: center;
+      margin-bottom: 10px;
+      color: whitesmoke;
+    }
+
+    .form-style input[type="text"],
+    .form-style input[type="password"],
+    .form-style input[type="date"],
+    .form-style input[type="datetime"],
+    .form-style input[type="email"],
+    .form-style input[type="number"],
+    .form-style input[type="search"],
+    .form-style input[type="time"],
+    .form-style input[type="url"],
+    .form-style textarea,
+    .form-style select,
+    .mytext {
+      -webkit-transition: all 0.30s ease-in-out;
+      -moz-transition: all 0.30s ease-in-out;
+      -ms-transition: all 0.30s ease-in-out;
+      -o-transition: all 0.30s ease-in-out;
+      outline: none;
+      box-sizing: border-box;
+      -webkit-box-sizing: border-box;
+      -moz-box-sizing: border-box;
+      width: 100%;
+      background: whitesmoke;
+      margin-bottom: 4%;
+      margin-top: 4%;
+      border: 2px solid #27a776;
+      border-radius: 10px;
+      padding: 3%;
+      color: #000000;
+      font: 95% Arial, Helvetica, sans-serif;
+    }
+
+    .form-style input[type="text"]:focus,
+    .form-style input[type="password"]:focus,
+    .form-style input[type="date"]:focus,
+    .form-style input[type="datetime"]:focus,
+    .form-style input[type="email"]:focus,
+    .form-style input[type="number"]:focus,
+    .form-style input[type="search"]:focus,
+    .form-style input[type="time"]:focus,
+    .form-style input[type="url"]:focus,
+    .form-style textarea:focus,
+    .form-style select:focus,
+    .mytext:focus {
+      box-shadow: 0 0 5px #27a776;
+      padding: 3%;
+      border: 5px solid #27a776;
+    }
+
+    .site-form span,
+    label {
+      font-size: 20px;
+      color: #27a776;
+      margin-bottom: 4%;
+    }
+
+    .errorlist {
+      color: #D9534F;
+    }
+
+    .white {
+      color: whitesmoke;
+      font-family: 'Times New Roman';
+    }
+  </style>
+  <title>Home | Listen</title>
+  <link rel="icon" type="image/x-icon" href="{% static 'favicon.jpg' %}">
+</head>
+
+<body>
+  <div class="header">
+    <div style="display: flex; align-items: center;">
+      <h1>Listen</h1>
+      <img src="{% static 'logo.jpg' %}" width="55" height="100">
+    </div>
+    <ul id="nav">
+      <li class="li"><a class="active" href="{% url 'home' %}">HOME</a></li>
+      <li class="li"><a href="{% url 'animation' %}">CONVERTER</a></li>
+      {% if not user.is_authenticated %}
+      <li class="li"><a href="{% url 'signup' %}">SIGN UP</a></li>
+      {% endif %}
+      {% if user.is_authenticated %}
+      <li class="li"><a href="{% url 'logout' %}">LOG OUT</a></li>
+      {% else %}
+      <li class="li"><a href="{% url 'login' %}">LOG IN</a></li>
+      {% endif %}
+      <li class="li"><a href="{% url 'contact' %}">CONTACT</a></li>
+      <li class="li"><a href="{% url 'about' %}">ABOUT</a></li>
+    </ul>
+  </div>
+
+  <hr color="#27a776" width="100%" size="2px" />
+
+  <div class="wrapper">
+    {% block content %}
+    {% endblock %}
+  </div>
+
+  
+
+</body>
+
+</html>

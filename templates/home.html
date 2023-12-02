@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+{% load static %}
+
+
+{% block content %}
+<div class="home-div">
+	<div style="border-radius: 5px; width: 70%">
+		<video width="100%" height="80%" autoplay loop>
+			<source src="{% static 'Hello.mp4' %}" type="video/mp4">
+			Your browser does not support the video tag.
+		</video>
+	</div>
+	<div>
+		<h2>Listen works as a <span>Translator</span> for people with hearing impairement.</h2>
+		<div class="form-style" style="margin: 0px">
+			<a href="{% url 'animation' %}"><button class="button">Click to Start</button></a>
+		</div>
+	</div>
+</div>
+<div class="footer">
+	<hr color="#27a776" width="100%" size="2px" />
+	<h3 style="color: whitesmoke;">© Copyright <strong
+			style="color:#27a776; font-family:'Times New Roman'">Listen.</strong> All rights reserved.</h3>
+</div>
+{% endblock %}

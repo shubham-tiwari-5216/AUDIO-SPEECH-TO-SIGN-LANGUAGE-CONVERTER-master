@@ -1,0 +1,36 @@
+texxt = []
+	tagged_words = nltk.pos_tag(words)
+
+	# Initialize the lemmatizer
+	lemmatizer = WordNetLemmatizer()
+
+	# Extract the subject, object, and verb from the tagged words
+	subject = None
+	object_ = None
+	verb = None
+
+	for word, tag in tagged_words:
+		word_lemma = lemmatizer.lemmatize(word, pos=get_wordnet_pos(tag))
+
+		if tag.startswith('NN'):  # Noun
+			if subject is None:
+				subject = word_lemma
+			elif object_ is None:
+				object_ = word_lemma
+
+		if tag.startswith('VB'):  # Verb
+			verb = word_lemma
+
+	# Reorder the sentence to SOV format
+	#new_sentence = f"{subject} {object_} {verb}"
+	if subject is not None:
+		texxt.append(lemmatizer.lemmatize(subject))
+	if object_ is not None:
+			texxt.append(lemmatizer.lemmatize(object_))
+	if verb is not None:
+				texxt.append(lemmatizer.lemmatize(verb))
+	words =  texxt
+
+
+
+	#to here
