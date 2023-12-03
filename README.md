@@ -7,12 +7,13 @@ A web application which takes in live audio speech recording as input, converts 
 >- A 3D animation of a character created
 using Blender 3D tool.
 
-Project Demo Video: https://youtu.be/YiHhD0QGrno
 
 
 ## Prerequisites
 
->- Python >= 3.7
+>- Python >= 3.11.5
+>- Django >= 4.2.7
+>- NLTK   >= 3.8.1
 >- Browser supports Web Speech API
 >- Download all required packages for python script A2SL/views.py
 
