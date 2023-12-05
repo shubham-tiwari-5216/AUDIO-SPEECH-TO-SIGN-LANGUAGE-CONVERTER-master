@@ -1,15 +1,25 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
 	
-	<h2>VERSION 1.0</h2>
+	<h2 class="ver">VERSION 1.0</h2>
  	<hr>
- 	<h2>CONTACT US</h2>
+	<div class="cont">
+ 	<h2 >CONTACT US</h2>
 	<p class="td">For suggestions and feedback:</p>
-	<p class="td">Our Email ID:</p>
-	<p class="td">Twitter handle:</p>
-	<p class="td">Contact number:</p>
+	<p class="td">Our Email ID:  listen@gmail.com</p>
+	<p class="td">Twitter handle: hey_listen</p>
+	<p class="td">Instagram handle: hey_listen</p>
+	<p class="td">Contact number: 9988461256</p>
+	</div>
  	<hr>
-	<p class="td">Thank you, For visiting our website</p>
+	 <div class="social-icons" >
+	 <div class="lgim"><img src="{% static 'ek.png' %} "  ></div>
+	 <div class="lgim"><img src="{% static 'do.png' %} " ></div>
+	 <div class="lgim"><img src="{% static 'teen.png' %} " ></div>
+	 <div class="lgim"><img src="{% static 'char.png' %} " ></div>
+	 </div>
+	<hr>
+	<p class="thq">Thank you, For visiting our website</p>
 
 {% endblock %}
