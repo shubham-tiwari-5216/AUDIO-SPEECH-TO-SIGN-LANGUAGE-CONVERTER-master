@@ -1,18 +1,34 @@
 {% extends 'base.html' %}
-
+{% load static %}
 {% block content %}
+<br>
+<h2 class="ver">VERSION 1.0</h2>
+<br>
+ 	<hr>
+	<br>
+	<h2>We are just a bunch of Enthusiastic people,who wants to help The Society.<br>
+		The transformation of audio speech into  hand signs is a groundbreaking  
+		advancement in communication  technology. This innovation aims to  bridge
+		 the gap between the hearing  and deaf communities, enabling  seamless
+		  interaction and  understanding.
+	</h2>
+	<br>
+	<hr><br>
+ 	<h2><u>Our Team:</u></h2>
+ 	<div class="tx">
+		<div>
+			<h4>SHUBHAM TIWARI</h4>
+			<div class="myimg"><img src="{% static 'one.png' %} "  width="200" height="250" ></div>
+		</div>
+		<div>
+			<h4>ASHISH YADAV</h4>
+			<div class="myimg"><img src="{% static 'two.png' %} "  width="200" height="250" ></div>
+		</div>
+		<div>
+			<h4>DEEPAK KUMAR YADAV</h4>
+			<div class="myimg"><img src="{% static 'three.png' %} "  width="200" height="250" ></div>
+		</div>
+  	</div>
 
-<h2>VERSION 1.0</h2>
- 	<hr>
-	<h2>We are just a bunch of Enthusiastic people,who wants to help The Society.</h2>
-	<hr>
- 	<h2>Our Team:</h2>
- 	<hr>
- 	<ul class="td">
-		<li>SHUBHAM TIWARI</li>
-		<li>ASHISH YADAV</li>
-		<li>DEEPAK KUMAR YADAV</li>
-  	</ul>
-	<hr>
-	<p class="td">Thank you, For visiting our website</p>
+	<p class="thq" >Thank you, For visiting our website</p>
 {% endblock %}
